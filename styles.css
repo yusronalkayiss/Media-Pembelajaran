@@ -1,0 +1,190 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Mengatur kontainer agar lebih fleksibel */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Input Nama */
+#nameInput {
+    margin: 30px auto 20px auto;
+    font-size: 18px;
+    border: 2px solid #3f51b5;
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+#nameInput:focus {
+    border: 2px solid #ff4081;
+}
+
+/* Pesan Peringatan */
+#warningMessage {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+/* Tombol Masuk */
+.button {
+    background-color: #ff4081;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    width: 20%;
+    height: 50px;
+}
+
+.button:hover {
+    background-color: #e91e63;
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: rgb(63, 61, 61);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Efek Mengetik */
+#typing-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+#cursor {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #nameInput {
+        font-size: 16px;
+        height: 40px;
+        width: 80%;
+    }
+
+    .button {
+        width: 140px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    #nameInput {
+        font-size: 14px;
+        height: 38px;
+        width: 90%;
+    }
+
+    .button {
+        width: 50%;
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Demokrasi dalam NKRI</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>📌 Menu</h2>
+        <button id="menuToggle">📌 Menu ☰</button>
+
+        <ul id="menuList">
+            <li><a href="#" id="menu-video">🎥 Video Pembelajaran</a></li>
+            <li><a href="#" id="menu-pendahuluan">📖 Pendahuluan</a></li>
+            <li><a href="#" id="menu-prinsip-demokrasi">⚖️ Prinsip Demokrasi</a></li>
+            <li><a href="#" id="menu-praktik-demokrasi">🏛️ Praktik Demokrasi</a></li>
+            <li><a href="#" id="menu-studi-kasus">📌 Studi Kasus</a></li>
+            <li><a href="#" id="menu-quiz">📝 Quiz Interaktif</a></li>
+            <li><a href="#" id="menu-simulasi">💬 Simulasi Debat</a></li>
+            <li><a href="#" id="menu-drag-drop">🎯 Game Drag & Drop</a></li>
+            <li><a href="#" id="menu-kesimpulan">📚 Kesimpulan</a></li>
+        </ul>
+    </aside>
+
+    <!-- Konten Utama -->
+    <main class="content">
+        <header class="top-bar">
+            <h1 id="welcomeMessage">Selamat Datang!</h1>
+            <button id="logoutButton" class="button">Keluar</button>
+        </header>
+
+        <!-- Section Konten -->
+        <section id="video" class="section">
+            <h2>🎥 Video Pembelajaran</h2>
+            <div class="card">
+                <p>Pelajari konsep demokrasi melalui video interaktif berikut:</p>
+                <div class="video-container">
+                    <iframe class="video" 
+                        src="https://www.youtube.com/embed/HOasZwybaig" 
+                        title="Video Demokrasi dalam NKRI" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendahuluan" class="section hidden">
+            <h2>📖 Pendahuluan</h2>
+            <div class="card">
+                <p>Demokrasi adalah sistem pemerintahan di mana kekuasaan berada di tangan rakyat.</p>
+            </div>
+        </section>
+
+        <section id="prinsip-demokrasi" class="section hidden">
+            <h2>⚖️ Prinsip Demokrasi</h2>
+            <div class="card">
+                <ul>
+                    <li>Kedaulatan Rakyat</li>
+                    <li>Kebebasan Berpendapat</li>
+                    <li>Pemilihan Umum yang Bebas</li>
+                    <li>Keadilan dan Persamaan Hak</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="praktik-demokrasi" class="section hidden">
+            <h2>🏛️ Praktik Demokrasi</h2>
+            <div class="card">
+                <ul>
+                    <li>🔹 Pemilu yang jujur dan adil</li>
+                    <li>🔹 Kebebasan berpendapat di media</li>
+                    <li>🔹 Keterlibatan masyarakat dalam kebijakan publik</li>
+                    <li>🔹 Perlindungan hak asasi manusia</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="studi-kasus" class="section hidden">
+            <h2>📌 Studi Kasus</h2>
+            <div class="card">
+                <p>Pahami dinamika demokrasi dengan menganalisis studi kasus berikut:</p>
+                <h3>🗳️ Kasus: Pemilu dan Demokrasi</h3>
+            </div>
+        </section>
+
+        <section id="quiz" class="section hidden">
+            <h2>📝 Quiz Interaktif</h2>
+            <div class="card">
+                <p><strong>1. Apa prinsip utama dalam demokrasi?</strong></p>
+                <button class="quiz-option" onclick="checkAnswer(this, true)">Kedaulatan Rakyat</button>
+                <button class="quiz-option" onclick="checkAnswer(this, false)">Kekuasaan Penuh Presiden</button>
+            </div>
+        </section>
+
+        <section id="kesimpulan" class="section hidden">
+            <h2>📚 Kesimpulan</h2>
+            <div class="card">
+                <p>Demokrasi menempatkan rakyat sebagai pemegang kekuasaan tertinggi.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
