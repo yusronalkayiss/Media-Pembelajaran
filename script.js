@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             warningMessage.style.display = "none"; // Sembunyikan peringatan jika nama sudah diisi
 
             // Simpan nama ke localStorage agar bisa digunakan di halaman dashboard
-            localStorage.setItem("username", name);
+            localStorage.setItem("userName", name);
 
             // Arahkan pengguna ke dashboard.html
             window.location.href = "dashboard.html";
