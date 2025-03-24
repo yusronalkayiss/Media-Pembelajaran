@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM Loaded. Mempersiapkan event listeners...");
 
+  // 🔹 Ambil nama pengguna dari localStorage
+  const userName = localStorage.getItem("userName");
+  const userNameDisplay = document.getElementById("userNameDisplay");
+
+  // 🔹 Jika ada nama pengguna, tampilkan di UI
+  if (userName) {
+      userNameDisplay.textContent = userName;
+  } else {
+      userNameDisplay.textContent = "Pengguna";
+  }
+
     // Tombol Logout
     const logoutButton = document.getElementById("logoutButton");
     if (logoutButton) {
