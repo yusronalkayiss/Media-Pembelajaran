@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function showSection(sectionId) {
         document.querySelectorAll('.section').forEach(section => section.classList.add('hidden'));
         document.getElementById(sectionId).classList.remove('hidden');
+
+        // Jika di HP, tutup menu setelah klik
+        if (window.innerWidth <= 768) {
+            document.getElementById("menuList").classList.remove("show");
+        }
     }
 
     // Default pertama kali buka halaman
@@ -41,6 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
             menuElement.addEventListener("click", function (event) {
                 event.preventDefault();
                 showSection(menuItems[menuId]);
+
+                // Tutup menu sidebar di HP setelah klik
+                if (window.innerWidth <= 768) {
+                    document.getElementById("menuList").classList.remove("show");
+                }
             });
         }
     });
@@ -52,5 +62,54 @@ document.addEventListener("DOMContentLoaded", function () {
         menuToggle.addEventListener("click", function () {
             menuList.classList.toggle("show");
         });
+    }
+});
+function checkAnswer(element, correct) {
+    let feedback = document.getElementById("quizFeedback");
+    if (correct) {
+        feedback.innerHTML = "✅ Jawaban Benar!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Jawaban Salah. Coba Lagi!";
+        feedback.style.color = "red";
+    }
+}
+function submitOpinion() {
+    let opinion = document.getElementById("userOpinion").value;
+    let feedback = document.getElementById("opinionFeedback");
+    
+    if (opinion.trim() === "") {
+        feedback.innerHTML = "❌ Silakan tulis pendapatmu terlebih dahulu!";
+        feedback.style.color = "red";
+    } else {
+        feedback.innerHTML = "✅ Terima kasih atas pendapatmu!";
+        feedback.style.color = "green";
+    }
+}
+const draggables = document.querySelectorAll(".draggable");
+const dropZone = document.getElementById("dropZone");
+const feedback = document.getElementById("dragDropFeedback");
+
+draggables.forEach(draggable => {
+    draggable.addEventListener("dragstart", function() {
+        this.classList.add("dragging");
+    });
+    draggable.addEventListener("dragend", function() {
+        this.classList.remove("dragging");
+    });
+});
+
+dropZone.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+
+dropZone.addEventListener("drop", function() {
+    let draggedItem = document.querySelector(".dragging");
+    if (draggedItem.id === "draggable1" || draggedItem.id === "draggable2") {
+        feedback.innerHTML = "✅ Benar! Ini adalah prinsip demokrasi.";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerHTML = "❌ Salah! Coba lagi.";
+        feedback.style.color = "red";
     }
 });
