@@ -88,14 +88,44 @@
             </div>
         </section>
 
-        <section id="quiz" class="section hidden">
-            <h2>📝 Quiz Interaktif</h2>
-            <div class="card">
-                <p><strong>1. Apa prinsip utama dalam demokrasi?</strong></p>
-                <button class="quiz-option" onclick="checkAnswer(this, true)">Kedaulatan Rakyat</button>
-                <button class="quiz-option" onclick="checkAnswer(this, false)">Kekuasaan Penuh Presiden</button>
-            </div>
-        </section>
+<!-- 📝 Quiz Interaktif -->
+<section id="quiz" class="section hidden">
+    <h2>📝 Quiz Interaktif</h2>
+    <div class="card">
+        <p>Jawablah pertanyaan berikut untuk menguji pemahamanmu tentang demokrasi:</p>
+        <p><strong>1. Apa prinsip utama dalam demokrasi?</strong></p>
+        <button class="quiz-option" onclick="checkAnswer(this, true)">Kedaulatan Rakyat</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">Kekuasaan Penuh Presiden</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">Pemerintahan Otoriter</button>
+        <p id="quizFeedback"></p>
+    </div>
+</section>
+
+<!-- 💬 Simulasi Debat -->
+<section id="simulasi" class="section hidden">
+    <h2>💬 Simulasi Debat</h2>
+    <div class="card">
+        <p>Masukkan pendapatmu tentang topik berikut:</p>
+        <h3>🗣️ Apakah media sosial lebih banyak membawa dampak positif atau negatif terhadap demokrasi?</h3>
+        <textarea id="userOpinion" placeholder="Tulis pendapatmu di sini..."></textarea>
+        <button class="button" onclick="submitOpinion()">Kirim Pendapat</button>
+        <p id="opinionFeedback"></p>
+    </div>
+</section>
+<!-- 🎯 Game Drag & Drop -->
+<section id="drag-drop" class="section hidden">
+    <h2>🎯 Game Drag & Drop</h2>
+    <div class="card">
+        <p>Seret dan letakkan konsep yang sesuai dengan prinsip demokrasi:</p>
+        <div class="drag-container">
+            <div class="draggable" draggable="true" id="draggable1">📜 Kedaulatan Rakyat</div>
+            <div class="draggable" draggable="true" id="draggable2">⚖️ Kebebasan Berpendapat</div>
+            <div class="draggable" draggable="true" id="draggable3">🚀 Sistem Monarki</div>
+        </div>
+        <div class="drop-zone" id="dropZone">Letakkan di sini ✅</div>
+        <p id="dragDropFeedback"></p>
+    </div>
+</section>
 
         <section id="kesimpulan" class="section hidden">
             <h2>📚 Kesimpulan</h2>
